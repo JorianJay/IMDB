@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/html">
+        <file>html/Status.html</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="prefs">images/Book.png</file>
+        <file alias="logs">images/Speech_Bubble.png</file>
+        <file alias="movie">images/Video.png</file>
+        <file alias="recycle">images/Recycle_Bin_Full.png</file>
+        <file alias="fix">images/Tools.png</file>
+        <file alias="Stop">images/Stop.png</file>
+        <file alias="info">images/Info.png</file>
+        <file alias="Push">images/Upload.png</file>
+        <file alias="Categorise">images/PieChart.png</file>
+        <file alias="moviepic.png">images/Toolbar Videos.png</file>
+        <file alias="photos">images/Photo_Album.png</file>
+    </qresource>
+</RCC>

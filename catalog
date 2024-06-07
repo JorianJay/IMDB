@@ -1,0 +1,12 @@
+[General]
+imdbUrl=http://www.imdb.com
+targetFolder=F:\\Entertainment\\Sorted
+DelayInterval=5
+MovieLocation=F:\\Entertainment\\movies
+filematchRegExp=(.*\\.[divx]{4}$)\xa0(.*\\.[mp4|mpg|avi|m4v|mkv]{3}$)
+reclaimfilemasks=*.db\xa0*.txt\xa0*.ini\xa0*.nfo\xa0*.DS_Store\xa0*.gif\xa0*.jpg\xa0*.ico\xa0*.bmp\xa0*.png\xa0*.srt\xa0*.tor*
+m4vtomp4=false
+sortbyreleaseyear=true
+choppers=dvdrip\xa0pvrip\xa0\x62rrip\xa0\x62\x64rip\xa0\x64vdscr\xa0\x63\x61m xvid\xa0xvid\xa0[\xa0(\xa0{
+dropapostrophe=true
+thumbsize=150

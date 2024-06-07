@@ -1,0 +1,1472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImDbSettings</class>
+ <widget class="QDialog" name="ImDbSettings">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>733</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Preferences</string>
+  </property>
+  <property name="windowOpacity">
+   <double>0.950000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLineEdit{
+     border-width: 2px;
+     border-radius: 8px;
+     color:rgb(0, 0, 0);
+     margin:2px;
+	font: 10pt &quot;MS Shell Dlg 2&quot;;
+}
+
+QLabel {
+	font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+}
+QPushButton{
+color: rgb(255,255,255);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgb(0, 0, 255),  stop:1 rgb(0, 0, 0));
+   border-style: outset;
+     border-width: 2px;
+     border-radius: 8px;
+     border-color: beige;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 2px;
+ }
+ QPushButton:pressed {
+	background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(35, 40, 3, 255), stop:0.16 rgba(136, 106, 22, 255), stop:0.225 rgba(166, 140, 41, 255), stop:0.285 rgba(204, 181, 74, 255), stop:0.345 rgba(235, 219, 102, 255), stop:0.415 rgba(245, 236, 112, 255), stop:0.52 rgba(209, 190, 76, 255), stop:0.57 rgba(187, 156, 51, 255), stop:0.635 rgba(168, 142, 42, 255), stop:0.695 rgba(202, 174, 68, 255), stop:0.75 rgba(218, 202, 86, 255), stop:0.815 rgba(208, 187, 73, 255), stop:0.88 rgba(187, 156, 51, 255), stop:0.935 rgba(137, 108, 26, 255), stop:1 rgba(35, 40, 3, 255));
+     border-style: inset;
+ }
+
+</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::ExpandingFieldsGrow</enum>
+     </property>
+     <property name="labelAlignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="horizontalSpacing">
+      <number>10</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>IMDB Url</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="edtDemonoidUrl">
+       <property name="text">
+        <string>http://www.imdb.com/</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="sortedFolderLabel">
+       <property name="text">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Sorted Folder (Target)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="margin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="edtSortedFolder"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="sortByReleaseYearFirstLabel">
+       <property name="text">
+        <string>Sorting</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QCheckBox" name="sortByReleaseYearFirstCheckBox">
+       <property name="text">
+        <string>Folders are sorted first by the release date then categories</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="dropApostrophesLabel">
+       <property name="text">
+        <string>Apostrophes</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QCheckBox" name="DropApostrophe">
+       <property name="text">
+        <string>Drop Apostrophes from movies name when searching IMDB</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Compatibility</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QCheckBox" name="chkm4vTompg">
+       <property name="text">
+        <string>Rename m4v (Apple) to mp4 (Windows)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="thumbnailSizeLabel">
+       <property name="text">
+        <string>Thumbnail Size</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QSpinBox" name="thumbnailSizeSpinBox">
+       <property name="minimum">
+        <number>10</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>100</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Delay Interval</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Files</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QToolBox" name="toolBox_2">
+       <property name="currentIndex">
+        <number>4</number>
+       </property>
+       <widget class="QWidget" name="page_5">
+        <attribute name="label">
+         <string>Scrape Delay</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_14" stretch="0">
+             <property name="margin">
+              <number>10</number>
+             </property>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_13" stretch="100,100">
+               <property name="spacing">
+                <number>15</number>
+               </property>
+               <property name="sizeConstraint">
+                <enum>QLayout::SetFixedSize</enum>
+               </property>
+               <property name="leftMargin">
+                <number>15</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>15</number>
+               </property>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <item>
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string>Next Action</string>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>false</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lblScrapeInterval">
+                   <property name="minimumSize">
+                    <size>
+                     <width>250</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>250</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>MS Shell Dlg 2</family>
+                     <pointsize>9</pointsize>
+                     <weight>9</weight>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>0 Seconds</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeType">
+                    <enum>QSizePolicy::Expanding</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>250</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetFixedSize</enum>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QDial" name="dialScrapeInterval">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>250</width>
+                     <height>250</height>
+                    </size>
+                   </property>
+                   <property name="palette">
+                    <palette>
+                     <active>
+                      <colorrole role="Button">
+                       <brush brushstyle="RadialGradientPattern">
+                        <gradient centralx="0.500000000000000" centraly="0.500000000000000" focalx="0.500000000000000" focaly="0.500000000000000" radius="0.500000000000000" type="RadialGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+                         <gradientstop position="0.000000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.100000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.200000000000000">
+                          <color alpha="167">
+                           <red>255</red>
+                           <green>176</green>
+                           <blue>176</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.300000000000000">
+                          <color alpha="92">
+                           <red>255</red>
+                           <green>151</green>
+                           <blue>151</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.400000000000000">
+                          <color alpha="51">
+                           <red>255</red>
+                           <green>125</green>
+                           <blue>125</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.500000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.520000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.600000000000000">
+                          <color alpha="84">
+                           <red>255</red>
+                           <green>180</green>
+                           <blue>180</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="1.000000000000000">
+                          <color alpha="0">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                        </gradient>
+                       </brush>
+                      </colorrole>
+                      <colorrole role="Base">
+                       <brush brushstyle="RadialGradientPattern">
+                        <gradient centralx="0.500000000000000" centraly="0.500000000000000" focalx="0.500000000000000" focaly="0.500000000000000" radius="0.500000000000000" type="RadialGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+                         <gradientstop position="0.000000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.100000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.200000000000000">
+                          <color alpha="167">
+                           <red>255</red>
+                           <green>176</green>
+                           <blue>176</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.300000000000000">
+                          <color alpha="92">
+                           <red>255</red>
+                           <green>151</green>
+                           <blue>151</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.400000000000000">
+                          <color alpha="51">
+                           <red>255</red>
+                           <green>125</green>
+                           <blue>125</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.500000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.520000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.600000000000000">
+                          <color alpha="84">
+                           <red>255</red>
+                           <green>180</green>
+                           <blue>180</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="1.000000000000000">
+                          <color alpha="0">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                        </gradient>
+                       </brush>
+                      </colorrole>
+                      <colorrole role="Window">
+                       <brush brushstyle="RadialGradientPattern">
+                        <gradient centralx="0.500000000000000" centraly="0.500000000000000" focalx="0.500000000000000" focaly="0.500000000000000" radius="0.500000000000000" type="RadialGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+                         <gradientstop position="0.000000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.100000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.200000000000000">
+                          <color alpha="167">
+                           <red>255</red>
+                           <green>176</green>
+                           <blue>176</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.300000000000000">
+                          <color alpha="92">
+                           <red>255</red>
+                           <green>151</green>
+                           <blue>151</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.400000000000000">
+                          <color alpha="51">
+                           <red>255</red>
+                           <green>125</green>
+                           <blue>125</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.500000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.520000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.600000000000000">
+                          <color alpha="84">
+                           <red>255</red>
+                           <green>180</green>
+                           <blue>180</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="1.000000000000000">
+                          <color alpha="0">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                        </gradient>
+                       </brush>
+                      </colorrole>
+                     </active>
+                     <inactive>
+                      <colorrole role="Button">
+                       <brush brushstyle="RadialGradientPattern">
+                        <gradient centralx="0.500000000000000" centraly="0.500000000000000" focalx="0.500000000000000" focaly="0.500000000000000" radius="0.500000000000000" type="RadialGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+                         <gradientstop position="0.000000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.100000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.200000000000000">
+                          <color alpha="167">
+                           <red>255</red>
+                           <green>176</green>
+                           <blue>176</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.300000000000000">
+                          <color alpha="92">
+                           <red>255</red>
+                           <green>151</green>
+                           <blue>151</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.400000000000000">
+                          <color alpha="51">
+                           <red>255</red>
+                           <green>125</green>
+                           <blue>125</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.500000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.520000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.600000000000000">
+                          <color alpha="84">
+                           <red>255</red>
+                           <green>180</green>
+                           <blue>180</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="1.000000000000000">
+                          <color alpha="0">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                        </gradient>
+                       </brush>
+                      </colorrole>
+                      <colorrole role="Base">
+                       <brush brushstyle="RadialGradientPattern">
+                        <gradient centralx="0.500000000000000" centraly="0.500000000000000" focalx="0.500000000000000" focaly="0.500000000000000" radius="0.500000000000000" type="RadialGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+                         <gradientstop position="0.000000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.100000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.200000000000000">
+                          <color alpha="167">
+                           <red>255</red>
+                           <green>176</green>
+                           <blue>176</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.300000000000000">
+                          <color alpha="92">
+                           <red>255</red>
+                           <green>151</green>
+                           <blue>151</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.400000000000000">
+                          <color alpha="51">
+                           <red>255</red>
+                           <green>125</green>
+                           <blue>125</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.500000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.520000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.600000000000000">
+                          <color alpha="84">
+                           <red>255</red>
+                           <green>180</green>
+                           <blue>180</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="1.000000000000000">
+                          <color alpha="0">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                        </gradient>
+                       </brush>
+                      </colorrole>
+                      <colorrole role="Window">
+                       <brush brushstyle="RadialGradientPattern">
+                        <gradient centralx="0.500000000000000" centraly="0.500000000000000" focalx="0.500000000000000" focaly="0.500000000000000" radius="0.500000000000000" type="RadialGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+                         <gradientstop position="0.000000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.100000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.200000000000000">
+                          <color alpha="167">
+                           <red>255</red>
+                           <green>176</green>
+                           <blue>176</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.300000000000000">
+                          <color alpha="92">
+                           <red>255</red>
+                           <green>151</green>
+                           <blue>151</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.400000000000000">
+                          <color alpha="51">
+                           <red>255</red>
+                           <green>125</green>
+                           <blue>125</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.500000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.520000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.600000000000000">
+                          <color alpha="84">
+                           <red>255</red>
+                           <green>180</green>
+                           <blue>180</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="1.000000000000000">
+                          <color alpha="0">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                        </gradient>
+                       </brush>
+                      </colorrole>
+                     </inactive>
+                     <disabled>
+                      <colorrole role="Button">
+                       <brush brushstyle="RadialGradientPattern">
+                        <gradient centralx="0.500000000000000" centraly="0.500000000000000" focalx="0.500000000000000" focaly="0.500000000000000" radius="0.500000000000000" type="RadialGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+                         <gradientstop position="0.000000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.100000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.200000000000000">
+                          <color alpha="167">
+                           <red>255</red>
+                           <green>176</green>
+                           <blue>176</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.300000000000000">
+                          <color alpha="92">
+                           <red>255</red>
+                           <green>151</green>
+                           <blue>151</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.400000000000000">
+                          <color alpha="51">
+                           <red>255</red>
+                           <green>125</green>
+                           <blue>125</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.500000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.520000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.600000000000000">
+                          <color alpha="84">
+                           <red>255</red>
+                           <green>180</green>
+                           <blue>180</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="1.000000000000000">
+                          <color alpha="0">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                        </gradient>
+                       </brush>
+                      </colorrole>
+                      <colorrole role="Base">
+                       <brush brushstyle="RadialGradientPattern">
+                        <gradient centralx="0.500000000000000" centraly="0.500000000000000" focalx="0.500000000000000" focaly="0.500000000000000" radius="0.500000000000000" type="RadialGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+                         <gradientstop position="0.000000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.100000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.200000000000000">
+                          <color alpha="167">
+                           <red>255</red>
+                           <green>176</green>
+                           <blue>176</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.300000000000000">
+                          <color alpha="92">
+                           <red>255</red>
+                           <green>151</green>
+                           <blue>151</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.400000000000000">
+                          <color alpha="51">
+                           <red>255</red>
+                           <green>125</green>
+                           <blue>125</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.500000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.520000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.600000000000000">
+                          <color alpha="84">
+                           <red>255</red>
+                           <green>180</green>
+                           <blue>180</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="1.000000000000000">
+                          <color alpha="0">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                        </gradient>
+                       </brush>
+                      </colorrole>
+                      <colorrole role="Window">
+                       <brush brushstyle="RadialGradientPattern">
+                        <gradient centralx="0.500000000000000" centraly="0.500000000000000" focalx="0.500000000000000" focaly="0.500000000000000" radius="0.500000000000000" type="RadialGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+                         <gradientstop position="0.000000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.100000000000000">
+                          <color alpha="255">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.200000000000000">
+                          <color alpha="167">
+                           <red>255</red>
+                           <green>176</green>
+                           <blue>176</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.300000000000000">
+                          <color alpha="92">
+                           <red>255</red>
+                           <green>151</green>
+                           <blue>151</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.400000000000000">
+                          <color alpha="51">
+                           <red>255</red>
+                           <green>125</green>
+                           <blue>125</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.500000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.520000000000000">
+                          <color alpha="205">
+                           <red>255</red>
+                           <green>76</green>
+                           <blue>76</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="0.600000000000000">
+                          <color alpha="84">
+                           <red>255</red>
+                           <green>180</green>
+                           <blue>180</blue>
+                          </color>
+                         </gradientstop>
+                         <gradientstop position="1.000000000000000">
+                          <color alpha="0">
+                           <red>255</red>
+                           <green>255</green>
+                           <blue>255</blue>
+                          </color>
+                         </gradientstop>
+                        </gradient>
+                       </brush>
+                      </colorrole>
+                     </disabled>
+                    </palette>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(255, 255, 255, 255), stop:0.1 rgba(255, 255, 255, 255), stop:0.2 rgba(255, 176, 176, 167), stop:0.3 rgba(255, 151, 151, 92), stop:0.4 rgba(255, 125, 125, 51), stop:0.5 rgba(255, 76, 76, 205), stop:0.52 rgba(255, 76, 76, 205), stop:0.6 rgba(255, 180, 180, 84), stop:1 rgba(255, 255, 255, 0));</string>
+                   </property>
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>300</number>
+                   </property>
+                   <property name="wrapping">
+                    <bool>false</bool>
+                   </property>
+                   <property name="notchTarget">
+                    <double>25.000000000000000</double>
+                   </property>
+                   <property name="notchesVisible">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>622</width>
+          <height>299</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>Reclaim Space</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <property name="margin">
+              <number>10</number>
+             </property>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <property name="margin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QLineEdit" name="edtDeleteFileMatch"/>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnAddDelFileFilter">
+                 <property name="text">
+                  <string>Add</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_9">
+               <property name="margin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QListView" name="lstDeleteFileTypes">
+                 <property name="alternatingRowColors">
+                  <bool>true</bool>
+                 </property>
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::ExtendedSelection</enum>
+                 </property>
+                 <property name="selectionRectVisible">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDialogButtonBox" name="buttonBox_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="standardButtons">
+                  <set>QDialogButtonBox::Discard|QDialogButtonBox::Reset|QDialogButtonBox::RestoreDefaults</set>
+                 </property>
+                 <property name="centerButtons">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>622</width>
+          <height>299</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>Chopper</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_12">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_10">
+             <property name="margin">
+              <number>10</number>
+             </property>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_14">
+               <property name="margin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QLineEdit" name="edtChop"/>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnAddDelFileFilter_2">
+                 <property name="text">
+                  <string>Add</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_11">
+               <property name="margin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QListView" name="lstChoppers">
+                 <property name="alternatingRowColors">
+                  <bool>true</bool>
+                 </property>
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::ExtendedSelection</enum>
+                 </property>
+                 <property name="selectionRectVisible">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDialogButtonBox" name="buttonBox_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="standardButtons">
+                  <set>QDialogButtonBox::Discard|QDialogButtonBox::Reset|QDialogButtonBox::RestoreDefaults</set>
+                 </property>
+                 <property name="centerButtons">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>622</width>
+          <height>299</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>File Matching Expressions</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <property name="margin">
+              <number>10</number>
+             </property>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <property name="margin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QLineEdit" name="edtRegExp"/>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton">
+                 <property name="text">
+                  <string>Add</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <property name="margin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QListView" name="lstRegExp">
+                 <property name="alternatingRowColors">
+                  <bool>true</bool>
+                 </property>
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::ExtendedSelection</enum>
+                 </property>
+                 <property name="selectionRectVisible">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDialogButtonBox" name="buttonBox_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="standardButtons">
+                  <set>QDialogButtonBox::Discard|QDialogButtonBox::Reset|QDialogButtonBox::RestoreDefaults</set>
+                 </property>
+                 <property name="centerButtons">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="page_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>622</width>
+          <height>263</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>Scan Folders</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="margin">
+            <number>10</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLineEdit" name="edtSeriesFolder"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnSelFolder">
+               <property name="text">
+                <string>Browse</string>
+               </property>
+               <property name="shortcut">
+                <string>Ctrl+B</string>
+               </property>
+               <property name="flat">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>5</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnAddFolder">
+               <property name="text">
+                <string>Add</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>10</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="margin">
+              <number>10</number>
+             </property>
+             <item>
+              <widget class="QListView" name="lstFoldersToScan">
+               <property name="alternatingRowColors">
+                <bool>true</bool>
+               </property>
+               <property name="selectionMode">
+                <enum>QAbstractItemView::ExtendedSelection</enum>
+               </property>
+               <property name="selectionRectVisible">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDialogButtonBox" name="buttonBox_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="standardButtons">
+                <set>QDialogButtonBox::Discard|QDialogButtonBox::Reset</set>
+               </property>
+               <property name="centerButtons">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:1 rgba(0, 0, 0,255));
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 10px;
+     border-color: beige;
+     font: bold 14px;
+     min-width: 5em;
+     padding: 3px;
+ }
+ QPushButton:pressed {
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:0.52 rgba(0, 0, 0, 0), stop:0.565 rgba(82, 121, 76, 33), stop:0.65 rgba(159, 235, 148, 64), stop:0.721925 rgba(255, 238, 150, 129), stop:0.77 rgba(255, 128, 128, 204), stop:0.89 rgba(191, 128, 255, 64), stop:1 rgba(0, 0, 0, 0));
+     border-style: inset;
+ }
+</string>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ImDbSettings</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ImDbSettings</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
